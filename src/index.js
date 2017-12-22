@@ -42,5 +42,5 @@ export default function Picture({ alt = defaultAlt, images = {} }) {
 
 Picture.propTypes = {
   alt: PropTypes.string,
-  images: PropTypes.obj,
+  images: PropTypes.object,
 };
