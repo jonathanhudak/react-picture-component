@@ -18,14 +18,18 @@
     "test:coverage": "nwb test-react --coverage",
     "test:watch": "nwb test-react --server"
   },
-  "dependencies": {},
+  "dependencies": {
+    "picturefill": "^3.0.2"
+  },
   "peerDependencies": {
-    "react": "16.x"
+    "react": "16.x",
+    "prop-types": "^15.6.0"
   },
   "devDependencies": {
     "nwb": "0.20.x",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "match-all": "^1.2.4"
   },
   "author": "",
   "homepage": "",

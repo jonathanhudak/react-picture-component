@@ -1,14 +1,22 @@
 import React, {Component} from 'react'
 import {render} from 'react-dom'
 
-import Example from '../../src'
+import Picture from '../../src';
+
+import sm from './paul-sm.jpg';
+import md from './paul-md.jpg';
+import lg from './paul-lg.jpg';
 
 class Demo extends Component {
   render() {
-    return <div>
-      <h1>img-srcset Demo</h1>
-      <Example/>
-    </div>
+    const images = {
+      700: md,
+      300: sm,
+      1200: lg,
+    };
+    return (
+        <Picture images={images}/>
+    );
   }
 }
 
