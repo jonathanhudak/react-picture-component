@@ -1,16 +1,41 @@
-# img-srcset
+# react-picture-component
 
-[![Travis][build-badge]][build]
 [![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
 
-Describe img-srcset here.
+Simple abstraction for [`<picture />`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture) for use in React applications. It imports the polyfill [picturefill](https://github.com/scottjehl/picturefill) to support older browsers.
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
+## Install
+
+- `npm install react-picture-component -S`
+- or `yarn add react-picture-component`
+
+## Usage
+
+```js
+import Picture from 'react-picture-component';
+import React from 'react';
+
+const images = {
+  700: './images/cat-700.jpg',
+  300: './images/cat-300.jpg',
+  1200: './images/cat-1200.jpg',
+};
+
+export function MyApp() {
+  return (
+    <div>
+      <Picture images={images} />
+    </div>
+  );
+}
+
+```
+
+## Props
+
+- `images`: Object with keys for the image size, and values for the image source.
+- `alt`: String
+
 
 [npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
 [npm]: https://www.npmjs.org/package/npm-package
-
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
