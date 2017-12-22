@@ -1,7 +1,7 @@
 {
-  "name": "img-srcset",
+  "name": "react-picture-component",
   "version": "1.0.0",
-  "description": "img-srcset React component",
+  "description": "React <picture /> component",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
