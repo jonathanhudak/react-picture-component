@@ -4,6 +4,10 @@
   "description": "React <picture /> component",
   "main": "lib/index.js",
   "module": "es/index.js",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/hudakdidit/react-picture-component"
+  },
   "files": [
     "css",
     "es",
