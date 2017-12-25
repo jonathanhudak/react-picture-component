@@ -1,12 +1,13 @@
 {
   "name": "react-picture-component",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "React <picture /> component",
   "main": "lib/index.js",
   "module": "es/index.js",
-  "repository": {
-    "type" : "git",
-    "url" : "https://github.com/hudakdidit/react-picture-component"
+  "license": "MIT",
+  "repository": "github:hudakdidit/react-picture-component",
+  "bugs": {
+    "url": "https://github.com/hudakdidit/react-picture-component/issues"
   },
   "files": [
     "css",
