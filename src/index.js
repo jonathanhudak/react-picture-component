@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import 'picturefill';
 
@@ -29,13 +29,33 @@ export function getPictureSettings(images) {
 
 export const defaultAlt = 'Descriptor for image';
 
-export default function Picture({ alt = defaultAlt, images = {} }) {
+export default function Picture({
+  alt = defaultAlt,
+  className,
+  images = {},
+  style,
+  renderImage,
+}) {
   const { smallestImageSrc , sources } = getPictureSettings(images);
+  const stylingProps = {
+    className,
+    style,
+  };
+
+  const img = renderImage ? renderImage({
+    alt,
+    src: smallestImageSrc,
+  }) : (
+    <img
+      src={smallestImageSrc}
+      alt={alt}
+    />
+  );
 
   return (
-    <picture>
+    <picture {...stylingProps}>
       {sources}
-      <img src={smallestImageSrc}  alt={alt} />
+      {img}
     </picture>
   )
 }
@@ -43,4 +63,5 @@ export default function Picture({ alt = defaultAlt, images = {} }) {
 Picture.propTypes = {
   alt: PropTypes.string,
   images: PropTypes.object,
+  renderImage: PropTypes.func,
 };

@@ -117,6 +117,15 @@ describe('Image Component', () => {
         expect(matchAll(html, /(<img src=)/gi).toArray().length).toEqual(1);
       })
     });
+
+    it('optionally taks a renderImage function prop', () => {
+      const className = 'MyCustomImageElement';
+      const customImage = props => (<img {...props} className={className} />);
+      render(<Picture images={images} renderImage={customImage} />, node, () => {
+        const html = node.innerHTML;
+        expect(html).toContain(className, 'Should use renderImage function to render the image if one is provided.');
+      });
+    });
   });
 
 });
