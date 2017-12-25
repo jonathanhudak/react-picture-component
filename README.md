@@ -35,6 +35,37 @@ export function MyApp() {
 
 - `images`: Object with keys for the image size, and values for the image source.
 - `alt`: String
+- `renderImage`: optional render-prop Function to render a custom image component.
+
+## Usage with styled-components
+
+You may want to leverage a styled component to render your `img` element. This can be achieved like so:
+
+```js
+import Picture from 'react-picture-component';
+import React from 'react';
+import styled from 'styled-components';
+
+const images = { ... };
+
+const MyImage = styled.img`
+  border: 2px solid gold;
+  // etc...
+`;
+
+export function MyApp() {
+  return (
+    <div>
+      <Picture
+        images={images}
+        renderImage={({src, alt }) => (
+          <MyImage src={src} alt={alt} />
+        )}
+      />
+    </div>
+  );
+}
+```
 
 
 [npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square

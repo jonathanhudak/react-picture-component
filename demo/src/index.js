@@ -15,7 +15,7 @@ class Demo extends Component {
       1200: lg,
     };
     return (
-        <Picture images={images}/>
+      <Picture images={images} />
     );
   }
 }
